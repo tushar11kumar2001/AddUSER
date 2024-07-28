@@ -17,6 +17,7 @@ const AddUser = () => {
       email.current.value = "";
       password.current.value = "";
       name.current.value = "";
+      alert("User add successfully..")
     }
   return (
     <div>

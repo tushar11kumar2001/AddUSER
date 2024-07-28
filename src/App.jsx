@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className='overflow-x-hidden'>
       <Dashboard/>
-      <ShowUsers/>
+    
     </div>
   )
 }
