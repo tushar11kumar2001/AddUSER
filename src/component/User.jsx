@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useUser } from './UserContext';
 
 const User = ({name,email}) => {
+    
     const user = useUser();
 
     function handleremove() {
         const confirm = prompt("Are you sure to delete this user (type yes for your confirmation) ?");
         console.log("confirm :",confirm);
-        if(confirm === "yes")user.removeUser({ "email": email});
+        if(confirm === "yes"){
+          
+            user.removeUser({ "email": email});
+        }
         else return ;
       }
     return (
