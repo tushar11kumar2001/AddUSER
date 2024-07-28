@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useUser } from './UserContext';
 
-const User = ({name,email}) => {
+const User = ({name,email,message}) => {
     
     const user = useUser();
 
@@ -9,8 +9,8 @@ const User = ({name,email}) => {
         const confirm = prompt("Are you sure to delete this user (type yes for your confirmation) ?");
         console.log("confirm :",confirm);
         if(confirm === "yes"){
-          
             user.removeUser({ "email": email});
+            message("User delete successfully")
         }
         else return ;
       }
